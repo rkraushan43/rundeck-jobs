@@ -1,0 +1,25 @@
+<joblist>
+  <job>
+    <description>This job will bootstrap dev-4 env</description>
+    <executionEnabled>true</executionEnabled>
+    <id>a843fcd8-2561-4fbe-9a0d-c36417b868ab</id>
+    <loglevel>DEBUG</loglevel>
+    <name>bootstrap dev-04</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>cmd prompt</description>
+        <exec>cmd.exe \c</exec>
+      </command>
+      <command>
+        <node-step-plugin type='localexec'>
+          <configuration>
+            <entry key='command' value='D:\Projects\DevOps-Practice\gcp-infra-bootstrap-env\src\main\script\bootstrap.sh dev04' />
+          </configuration>
+        </node-step-plugin>
+      </command>
+    </sequence>
+    <uuid>a843fcd8-2561-4fbe-9a0d-c36417b868ab</uuid>
+  </job>
+</joblist>
